@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inicio</title>
+</head>
+<body>
+
+	<ul>
+		{% for dato in datos %}
+			<li> <a href="{% url principal.views.detalle dato.id %}">{{ dato.nombres }} {{ dato.apellidos }}</a> </li>
+		{% empty %}
+			<li>No hay datos.</li>
+		{% endfor %}
+	</ul>
+
+</body>
+</html>
